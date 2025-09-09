@@ -1,0 +1,17 @@
+smart_shopper/
+├── manage.py
+├── smart_shopper/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── shopper/
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── scraper.py
+    ├── tests.py
+    ├── views.py
+    ├── urls.py
+    └── migrations/

@@ -15,18 +15,14 @@ Get real-time product data (name, brand, price, weight) from Google Shopping by 
 
 # Setup instructions 
 1.  Clone the Repository
-bash
 git clone https://github.com/<your-username>/smart_shopper_django.git
 cd smart_shopper_django.
 2. Create a Virtual Environment
-bash
 python -m venv venv
 source venv/bin/activate. 
 3. Install Dependencies
-bash
 pip install -r requirements.txt
 Sample requirements.txt:
-text
 Django>=4.2
 httpx[http2]
 lxml
@@ -36,15 +32,13 @@ playwright
 * For caching:
 django-redis
 (Optional, for Playwright)
-bash
 playwright install
 4. Run Migrations
-bash
 python manage.py migrate
 5. Configuration
 Redis Caching 
 Configure Django cache settings in settings.py:
-python
+  
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -58,11 +52,9 @@ We can start with our Reddis Server if it  is available.
 
 # Run the Server Instructions 
 1. With async support, run the server using Uvicorn:
-bash
 uvicorn smart_shopper.asgi:application
 
 Standard Django run (slower, debugging only):
-bash
 python manage.py runserver.
 
 # Example Output :
